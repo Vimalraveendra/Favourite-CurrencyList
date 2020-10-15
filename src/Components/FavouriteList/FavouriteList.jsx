@@ -43,9 +43,6 @@ const FavouriteList=({currencies,currency,handleChange,addCurrency,removeCurrenc
         Clear Item
       </button>
     </div>
-    
-    
-
   </React.Fragment>
     )
 }
