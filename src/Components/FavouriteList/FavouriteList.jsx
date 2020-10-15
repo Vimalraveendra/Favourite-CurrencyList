@@ -1,7 +1,10 @@
 import React from 'react';
 import { v4 as uuidv4 } from "uuid";
+import SelectCurrency from '../SelectCurrency/SelectCurrency'
+
 
 const FavouriteList=({currencies,currency,handleChange,addCurrency,removeCurrency})=>{
+   
     return(
     <React.Fragment>
     <div className="select-item">
@@ -17,7 +20,7 @@ const FavouriteList=({currencies,currency,handleChange,addCurrency,removeCurrenc
       </select>
     </div>
 
-   
+    <SelectCurrency />
 
     <div className="btn-item">
       <button
