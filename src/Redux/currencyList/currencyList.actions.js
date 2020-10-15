@@ -1,5 +1,5 @@
 import currencyListActionTypes from "./currencyList.types";
-
+import {fetchCurrency } from '../../Api/Api'
 const requestCurrencyStart=()=>({
   type: currencyListActionTypes.REQUEST_RATES_PENDING 
 })
@@ -14,20 +14,19 @@ const requestCurrencyFailure = error=>({
         payload: error
 })
 
-export const requestCurrencyRates = () => dispatch => {
+export const requestCurrencyRates = () => async(dispatch) => {
   dispatch(requestCurrencyStart())
-  fetch(`http://api.nbp.pl/api/exchangerates/tables/a/?format=JSON`)
-    .then(response => response.json())
-    .then(data => {
-      data = data[0].rates;
-      dispatch(requestCurrencySuccess(data))
-     
-    })
-    .catch(error =>
+   try{
+    const data = await(fetchCurrency())
+    dispatch(requestCurrencySuccess(data))
+   }
+catch(error){
        dispatch(requestCurrencyFailure(error))
      
-    );
+}
 };
+
+
 export const handleChange = event => ({
   type: currencyListActionTypes.HANDLE_CHANGE,
   payload: event

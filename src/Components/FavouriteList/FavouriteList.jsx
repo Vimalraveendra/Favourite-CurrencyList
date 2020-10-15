@@ -9,7 +9,7 @@ import {
   popupWindow
 } from "../../Redux/currencyList/currencyList.actions";
 import { v4 as uuidv4 } from "uuid";
-
+import PopupModal from '../PopupModal/PopupModal';
 
 
 
@@ -60,7 +60,10 @@ const FavouriteList = ({
         Clear Item
       </button>
     </div>
-   
+    {isOpen?
+      (<PopupModal />):null
+    }
+
 
   </React.Fragment>
   
