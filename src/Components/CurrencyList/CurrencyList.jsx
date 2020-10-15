@@ -12,7 +12,6 @@ class CurrencyList extends React.Component {
           <div>
             <h3 className="title">Favourite Currency List </h3>
           </div>
-  
           <FavouriteList />
         </React.Fragment>
       );
