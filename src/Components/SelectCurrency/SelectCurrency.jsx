@@ -1,6 +1,6 @@
 import React from "react";
 import FavouriteCurrency from "../FavouriteCurrency/FavouriteCurrency";
-
+import './SelectCurrency.scss'
 
 
 const SelectCurrency = ({ favouriteList}) => {
