@@ -1,7 +1,7 @@
 import React from 'react';
 import { v4 as uuidv4 } from "uuid";
 import SelectCurrency from '../SelectCurrency/SelectCurrency'
-
+import './FavouriteList.scss'
 
 const FavouriteList=({currencies,currency,handleChange,addCurrency,removeCurrency})=>{
    
