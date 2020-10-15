@@ -1,6 +1,6 @@
 
-import currencyListActionTypes from "./currencylist.type";
-import { currencySuccess, addCurrencyToList } from "./currencylist.utils";
+import currencyListActionTypes from "./currencyList.types";
+import { currencySuccess, addCurrencyToList } from "./currencyList.utils";
 
 const initialState = {
   currencies: [],

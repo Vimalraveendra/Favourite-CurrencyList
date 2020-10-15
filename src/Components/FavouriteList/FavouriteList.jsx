@@ -1,11 +1,28 @@
-import React from 'react';
+import React from "react";
+import { connect } from "react-redux";
+import "./FavouriteList.scss";
+import SelectCurrency from "../SelectCurrency/SelectCurrency";
+import {
+  handleChange,
+  addCurrency,
+  clearCurrency,
+  popupWindow
+} from "../../Redux/currencyList/currencyList.actions";
 import { v4 as uuidv4 } from "uuid";
-import SelectCurrency from '../SelectCurrency/SelectCurrency'
-import './FavouriteList.scss'
 
-const FavouriteList=({currencies,currency,handleChange,addCurrency,removeCurrency})=>{
-   
-    return(
+
+
+
+const FavouriteList = ({
+  currencies,
+  handleChange,
+  currency,
+  addCurrency,
+  isOpen,
+  popupWindow,  
+}) => {
+  
+  return (
     <React.Fragment>
     <div className="select-item">
       <select
@@ -14,7 +31,7 @@ const FavouriteList=({currencies,currency,handleChange,addCurrency,removeCurrenc
         value={currency}
         onChange={handleChange}
       >
-        {currencies && currencies.map((currency, index) => (
+        {currencies.map((currency, index) => (
           <option key={index}>{currency}</option>
         ))}
       </select>
@@ -38,13 +55,31 @@ const FavouriteList=({currencies,currency,handleChange,addCurrency,removeCurrenc
       <button
         type="submit"
         className="btn red"
-        onClick={removeCurrency}
+        onClick={popupWindow}
       >
         Clear Item
       </button>
     </div>
-  </React.Fragment>
-    )
-}
+   
 
-export default FavouriteList;
+  </React.Fragment>
+  
+  )
+};
+
+const mapStateToProps = ({
+  currencylist: { currency, currencies, id, favouriteList ,isOpen}
+}) => ({
+  currency,
+  currencies,
+  id,
+  favouriteList,
+  isOpen
+});
+const mapDispatchToProps = dispatch => ({
+  handleChange: event => dispatch(handleChange(event.target.value)),
+  addCurrency: item => dispatch(addCurrency(item)),
+  clearCurrency: () => dispatch(clearCurrency()),
+  popupWindow:()=>dispatch(popupWindow())
+});
+export default connect(mapStateToProps, mapDispatchToProps)(FavouriteList);
