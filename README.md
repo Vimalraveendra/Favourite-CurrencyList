@@ -10,7 +10,7 @@ React to run the project.
 
 Set up of Application.
 
-created create-react-app boiler plate.
+1.created create-react-app boiler plate.
 2.created reusable component folders.
 3.fetches the currency rate from the third part server while the app initializes.
 4.Created select options for allowing users to select & follow the currencies.
