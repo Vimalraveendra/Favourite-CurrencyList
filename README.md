@@ -8,7 +8,7 @@ React to run the project.
 
 4.Run yarn start.
 
-Set up of Application.
+Set up of Application:
 
 1.created create-react-app boiler plate.
 2.created reusable component folders.
