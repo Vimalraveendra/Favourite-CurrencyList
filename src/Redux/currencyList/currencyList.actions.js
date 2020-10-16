@@ -1,15 +1,18 @@
 import currencyListActionTypes from "./currencyList.types";
 import {fetchCurrency } from '../../Api/Api'
-const requestCurrencyStart=()=>({
+
+
+
+export const requestCurrencyStart=()=>({
   type: currencyListActionTypes.REQUEST_RATES_PENDING 
 })
 
-const requestCurrencySuccess = (data)=>({
+export const requestCurrencySuccess = (data)=>({
   type: currencyListActionTypes.REQUEST_RATES_SUCCESS,
   payload: data
 })
 
-const requestCurrencyFailure = error=>({
+export const requestCurrencyFailure = error=>({
   type: currencyListActionTypes.REQUEST_RATES_FAILED,
         payload: error
 })
