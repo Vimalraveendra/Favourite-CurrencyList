@@ -10,13 +10,13 @@ React to run the project.
 
 Set up of Application.
 
-1.created create-react-app boiler plate.
-2.created reusable component folders.
-3.fetches the currency rate from the third part server while the app initializes.
-4.Created select options for allowing users to select & follow the currencies.
-5.Created add button for the users to add the favourite currencies into their list.
-6.Created Delete button & Clear button. if the user wants to remove one item or to remove all items from the favourite list.
-7.Created PopupModal window after click on currency remove button delete confirmation popup appears.
+created create-react-app boiler plate.
+created reusable component folders.
+fetches the currency rate from the third part server while the app initializes.
+Created select options for allowing users to select & follow the currencies.
+Created add button for the users to add the favourite currencies into their list.
+Created Delete button & Clear button. if the user wants to remove one item or to remove all items from the favourite list.
+Created PopupModal window after click on currency remove button delete confirmation popup appears.
 
 
 Solution build with:
