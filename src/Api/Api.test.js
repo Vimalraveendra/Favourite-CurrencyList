@@ -13,9 +13,7 @@ describe("Get FetchCurrency", () => {
                     code: "THB",
                     mid: 0.1251
                     },     
-          
-            ]
-             
+            ]     
         }]
         
       })
