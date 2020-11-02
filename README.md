@@ -1,6 +1,6 @@
 
-##Setup
-React to run the project.
+#Setup
+To run this project, install it locally using npm.
 
 1.Clone this repo.
 
@@ -10,7 +10,7 @@ React to run the project.
 
 4.Run yarn start.
 
-Application Setup:
+##Application Setup:
 
 1.created create-react-app boiler plate.
 2.created reusable component folders.
@@ -21,10 +21,10 @@ Application Setup:
 7.Created PopupModal window. After clicking on currency remove button, delete confirmation popup appears.
 
 
-Solution build with:
+##Solution build with:
 ● React components & Redux.
 ● ES2015 & ES2016.
 ● Code linter and formatter.
 ● Enzyme Framework used for snapshot testing of components.
 ● libraries used axios,uuid,redux-mock-store,enzyme,enzyme-adapter,redux-logger& redux-thunk.
-● Setup instructions in README file.
+

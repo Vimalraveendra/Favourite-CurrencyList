@@ -3,16 +3,16 @@ import {fetchCurrency } from '../../Api/Api'
 
 
 
-export const requestCurrencyStart=()=>({
+ const requestCurrencyStart=()=>({
   type: currencyListActionTypes.REQUEST_RATES_PENDING 
 })
 
-export const requestCurrencySuccess = (data)=>({
+ const requestCurrencySuccess = (data)=>({
   type: currencyListActionTypes.REQUEST_RATES_SUCCESS,
   payload: data
 })
 
-export const requestCurrencyFailure = error=>({
+ const requestCurrencyFailure = error=>({
   type: currencyListActionTypes.REQUEST_RATES_FAILED,
         payload: error
 })
